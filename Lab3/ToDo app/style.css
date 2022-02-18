@@ -1,0 +1,25 @@
+#whole-container{
+    display: flex;
+    flex-direction: column;
+}
+#header {
+    padding: 10px;
+    background-color: rgb(111, 3, 121);
+    color: rgb(215, 90, 219);
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+    margin-top:50px;
+}
+#add-new-task-container{
+    width: 480px;
+    margin: 0 auto;
+    color:rgb(215, 90, 219);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(192, 53, 192);
+}
+#task-description{
+    width: 400px;
+}

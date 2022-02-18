@@ -80,7 +80,7 @@ header ul li a{
 .cards{
 	margin: 40px 0;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 .card{
 	width: 280px;
@@ -100,6 +100,9 @@ header ul li a{
 	margin: 10px 0;
 	color: rgb(0,103,184);
 	font-weight: 600;
+}
+.cardBtn:hover{
+	color: purple;
 }
 
 footer{
