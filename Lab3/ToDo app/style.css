@@ -4,12 +4,15 @@
 }
 #header {
     padding: 10px;
-    background-color: rgb(111, 3, 121);
-    color: rgb(215, 90, 219);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: rgb(185, 30, 199);
+    color: rgb(58, 13, 59);
     text-align: center;
     margin: 0 auto;
     width: 500px;
     margin-top:50px;
+    font-size: 20px;
 }
 #add-new-task-container{
     width: 480px;
@@ -18,8 +21,42 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: rgb(192, 53, 192);
+    background-color: rgb(218, 170, 218);
+    margin-top: 10px;
 }
 #task-description{
     width: 400px;
+}
+
+#tasks {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-item{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 476px;
+    background-color: rgb(218, 170, 218);
+    border: 2px dashed rgb(142, 137, 212);
+}
+
+.todo-item.checked{
+    background-color: rgb(228, 222, 228);
+    text-decoration: line-through;
+}
+
+.description{
+    width: 400px;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+#add-task-button:hover {
+    background-color: rgb(165, 83, 197);
 }

@@ -2,18 +2,16 @@ const addTaskButton = document.getElementById('add-task-button')
 const addTaskInput = document.getElementById('task-description')
 const taskHolder = document.getElementById('tasks')
 
-// const task = {
-//     description: '',
-//     completed: false
-// }
 let tasks;
 !localStorage.tasks ? tasks= [] : tasks = JSON.parse(localStorage.getItem('tasks'))
 
 let todoItemElements = [];
 
-function Task(description){
-    this.description = description;
-    this.completed = false;
+class Task {
+    constructor(description) {
+        this.description = description;
+        this.completed = false;
+    }
 }
 
 const createTaskTemplate = (task, index) => {
@@ -21,11 +19,13 @@ const createTaskTemplate = (task, index) => {
                 <div class="done">
                     <input onclick="completeTask(${index})" type="checkbox" ${task.completed? 'checked':''}>
                 </div>
-                <div class="descriptio">
+                <div class="description">
                     ${task.description}
                 </div>
                 <div class="deleteButton">
-                    <button onclick="deleteTask(${index})">Delete</button>
+                    <button onclick="deleteTask(${index})">
+                        <i class="fa-solid fa-trash-can" style="color: rgb(185, 30, 199)"></i>
+                    </button>
                 </div>
             </div>
             `
@@ -54,8 +54,8 @@ const updateLocal = () => {
 }
 
 const completeTask = index => {
-    task[index].completed = !task[index].completed;
-    if(task[index].completed){
+    tasks[index].completed = !tasks[index].completed;
+    if(tasks[index].completed){
         todoItemElements[index].classList.add('checked')
     }else{
         todoItemElements[index].classList.remove('checked')
