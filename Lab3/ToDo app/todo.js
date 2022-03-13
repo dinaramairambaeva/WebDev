@@ -66,10 +66,16 @@ const completeTask = index => {
 
 
 addTaskButton.addEventListener('click', () => {
-    tasks.push(new Task(addTaskInput.value));
-    updateLocal();
-    fillTaskList();
-    addTaskInput.value = '';
+    // document.getElementsByClassName('add').onclick.innerHTML= '';
+    if (addTaskInput.value == 0){
+        document.getElementsByClassName('add')[0].append(document.createElement('label').innerText = 'Это поле не может быть пустым')
+    }else{    
+        
+        tasks.push(new Task(addTaskInput.value));
+        updateLocal();
+        fillTaskList();
+        addTaskInput.value = '';
+    }
 })
 
 
@@ -78,3 +84,8 @@ const deleteTask = index => {
     updateLocal();
     fillTaskList();
 }
+
+// className().onclick = 
+// function(){
+//     f=
+// }
